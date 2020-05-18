@@ -1,10 +1,11 @@
 <div class="content-container">
   <div class="content-area">
-    <h3>Clarity Starter Instructions:</h3>
-    <ul>
-      <li>Start by clicking Fork in the toolbar above.</li>
-      <li>Implement the problem in the new editor.</li>
-      <li>Save the result, and share the url in a GitHub or StackOverflow issue.</li>
-    </ul>
+    <h3>Salas de chat:</h3>
+    <div class="clr-row">
+      <div class="clr-col-lg-4 clr-col-md-6 clr-col-12"
+        *ngFor="let room of listRoom">
+        <amg-card-lobby [room]="room"></amg-card-lobby>
+      </div>
+    </div>
   </div>
 </div>
