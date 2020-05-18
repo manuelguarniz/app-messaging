@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LobbyItem } from '@app/models/lobby-item/lobby-item';
-import { LobbyItemForm } from '@app/models/lobby-item/lobby-item-form';
+import { LobbyItemModel } from '@app/models/lobby-item/lobby-item.model';
 import { ClrLoadingState } from '@clr/angular';
 
 @Component({
@@ -17,7 +17,7 @@ export class LobbyComponent implements OnInit {
     { nameLobby: '¿Javascript es el futuro?', presenter: 'Maria Parado', initialDate: new Date(), participants: 287 },
   ];
 
-  listRoom: Array<LobbyItemForm> = [];
+  listLobbyItem: Array<LobbyItemModel> = [];
 
   constructor() { }
 
@@ -26,19 +26,19 @@ export class LobbyComponent implements OnInit {
   }
 
   loadData(): void {
-    this.listRoom = [];
+    this.listLobbyItem = [];
     this.data.forEach(item => {
-      const roomForm = new LobbyItemForm(item);
-      roomForm.handleEventClick = (room: LobbyItemForm) => this.handleEventClickCard(room);
-      this.listRoom.push(roomForm);
+      const roomForm = new LobbyItemModel(item);
+      roomForm.handleEventClick = (lobbyItem: LobbyItemModel) => this.handleEventClickCard(lobbyItem);
+      this.listLobbyItem.push(roomForm);
     });
   }
 
-  handleEventClickCard(room: LobbyItemForm) {
-    console.log('click: ' + room.nameLobby);
-    room.loading = ClrLoadingState.LOADING;
+  handleEventClickCard(lobbyItem: LobbyItemModel) {
+    console.log('click: ' + lobbyItem.nameLobby);
+    lobbyItem.loading = ClrLoadingState.LOADING;
     setTimeout(() => {
-      room.loading = ClrLoadingState.DEFAULT;
+      lobbyItem.loading = ClrLoadingState.DEFAULT;
     }, 2000);
   }
 

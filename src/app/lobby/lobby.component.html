@@ -3,8 +3,8 @@
     <h3>Salas de chat:</h3>
     <div class="clr-row">
       <div class="clr-col-lg-4 clr-col-md-6 clr-col-12"
-        *ngFor="let room of listRoom">
-        <amg-card-lobby [room]="room"></amg-card-lobby>
+        *ngFor="let lobbyItem of listLobbyItem">
+        <amg-card-lobby [lobbyItem]="lobbyItem"></amg-card-lobby>
       </div>
     </div>
   </div>

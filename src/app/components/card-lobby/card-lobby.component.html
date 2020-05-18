@@ -1,17 +1,17 @@
 <a class="card clickable">
   <div class="card-block">
     <div class="card-title">
-      {{ room.nameLobby }}
+      {{ lobbyItem.nameLobby }}
     </div>
     <div class="card-text">
       <ul>
-        <li><strong>Moderador:</strong> {{ room.presenter }}</li>
-        <li><strong>Hora de inicio:</strong> {{ room.initialDate | date : 'fullDate' }} </li>
-        <li><strong>Participantes:</strong> {{ room.participants }} </li>
+        <li><strong>Moderador:</strong> {{ lobbyItem.presenter }}</li>
+        <li><strong>Hora de inicio:</strong> {{ lobbyItem.initialDate | date : 'fullDate' }} </li>
+        <li><strong>Participantes:</strong> {{ lobbyItem.participants }} </li>
       </ul>
     </div>
   </div>
   <div class="card-footer">
-    <button [clrLoading]="room.loading" class="btn btn-inverse" (click)="room.handleEventClick(room)">Conectarse</button>
+    <button [clrLoading]="lobbyItem.loading" class="btn btn-inverse" (click)="lobbyItem.handleEventClick(lobbyItem)">Conectarse</button>
   </div>
 </a>

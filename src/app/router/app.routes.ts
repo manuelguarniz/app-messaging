@@ -6,6 +6,11 @@ export const routesApp: Routes = [
     loadChildren: () => import('../lobby/lobby.module')
       .then(m => m.LobbyModule),
   },
+  {
+    path: 'room',
+    loadChildren: () => import('../room/room.module')
+      .then(m => m.RoomModule),
+  },
   // {
   //   path: 'auth',
   //   children: [

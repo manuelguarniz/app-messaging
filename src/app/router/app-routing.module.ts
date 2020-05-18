@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { routesApp } from './app.routes';
 
 const config: ExtraOptions = {
+  onSameUrlNavigation: 'reload',
   useHash: true,
 };
 

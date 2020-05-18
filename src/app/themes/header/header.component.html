@@ -11,10 +11,10 @@
     </label>
   </form>
   <div class="header-actions">
-    <a class="active nav-link nav-text">
+    <a [routerLink]="[ '/lobby' ]" routerLinkActive="active" class="nav-link nav-text">
       Sala de espera
     </a>
-    <a class="nav-link nav-text">
+    <a [routerLink]="[ '/room/new' ]" routerLinkActive="active" class="nav-link nav-text">
       Nueva sala
     </a>
     <a class="nav-link nav-text">

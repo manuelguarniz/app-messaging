@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { LobbyItemForm } from '@app/models/lobby-item/lobby-item-form';
+import { LobbyItemModel } from '@app/models/lobby-item/lobby-item.model';
 
 @Component({
   selector: 'amg-card-lobby',
@@ -7,7 +7,7 @@ import { LobbyItemForm } from '@app/models/lobby-item/lobby-item-form';
   styles: [],
 })
 export class CardRoomComponent implements OnInit {
-  @Input() room: LobbyItemForm;
+  @Input() lobbyItem: LobbyItemModel;
 
   constructor() { }
 
