@@ -1,1 +1,38 @@
-<h3>New Room</h3>
+<div class="clr-row clr-justify-content-center">
+
+  <div class="clr-col-6">
+
+    <h3>Nueva sala de chat</h3>
+    <!-- Reactive Example -->
+    <form clrForm [formGroup]="reactiveModel" (ngSubmit)="submit()">
+      <clr-control-container>
+        <label>Nombre:</label>
+        <input clrControl placeholder="Nombre de la sala" formControlName="name" autocomplete="off" />
+        <clr-control-error> {{ reactiveModel.controls.name["errorMessage"] }} </clr-control-error>
+      </clr-control-container>
+
+      <!-- <clr-control-container>
+        <label>Required</label>
+        <input clrControl placeholder="Input control" formControlName="required" />
+        <clr-control-helper>Helper text</clr-control-helper>
+        <clr-control-error *clrIfError="'required'">This is a required field</clr-control-error>
+        <clr-control-error *clrIfError="'minlength'; error as err">Must be at least {{ err.requiredLength }} characters</clr-control-error>
+        <clr-control-error *clrIfError="'pattern'; error as err">It must match '{{ err.requiredPattern }}'</clr-control-error>
+      </clr-control-container>
+
+      <clr-control-container>
+        <label>Ng Select 2</label>
+        <select clrSelect [multiple]="true" formControlName="cars">
+          <option *ngFor="let car of cars" [value]="car.id">{{car.name}}</option>
+          <option [value]="'custom'">Custom</option>
+        </select>
+        <clr-control-helper>Helper text</clr-control-helper>
+        <clr-control-error *clrIfError="'required'">This is a required field</clr-control-error>
+      </clr-control-container> -->
+
+      <button [disabled]="!reactiveModel.valid" class="btn btn-inverse" type="submit">Submit</button>
+    </form>
+
+  </div>
+
+</div>
