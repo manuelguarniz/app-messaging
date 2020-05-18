@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ThemesModule } from './themes/themes.module';
+import { AppRoutingModule } from './router/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ThemesModule } from './themes/themes.module';
     ClarityModule,
     BrowserAnimationsModule,
     ThemesModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [
